@@ -8,6 +8,7 @@ import java.util.ListIterator;
 import static java.util.Arrays.copyOf;
 import static java.util.Arrays.copyOfRange;
 
+@SuppressWarnings("unchecked")
 public class ArrayListImpl<E> implements List<E> {
     private Object[] data;
     private int size;

@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "me.champeau.jmh" version "0.6.6"
 }
 
 group 'org.example'
@@ -10,11 +11,15 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testImplementation 'org.assertj:assertj-core:3.21.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
+
 test {
     useJUnitPlatform()
+}
+
+jmh {
+    fork = 1
 }
